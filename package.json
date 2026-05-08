@@ -28,7 +28,9 @@
       }
     },
     "collectCoverageFrom": [
-      "script/seat-booking-classes.js"
+      "script/seat-booking-classes.js",
+      "script/seat-booking-main.js"
+      
     ],
     "coverageReporters": [
       "text",
