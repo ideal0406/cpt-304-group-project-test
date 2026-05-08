@@ -1,18 +1,18 @@
-# Budget-App-JavaScript
+# Seat-booking-app-JavaScript
 
 [![codecov](https://codecov.io/github/ideal0406/cpt-304-group-project-test/graph/badge.svg?token=qjBVklgYXo)](https://app.codecov.io/github/ideal0406/cpt-304-group-project-test/tree/main)
-[![Vercel](https://vercelbadge.vercel.app/api/lz233/Budget-app)](https://budget.project.ac.cn)
+[![Deploy Status](https://img.shields.io/badge/deploy-live-brightgreen?style=flat&logo=render)](https://seat-booking-app-0hle.onrender.com)
 
-This project is for the CAN304 group assignment (Group 45).
+This project is for the CPT304 group assignment (Group 70).
 
 Welcome to the Budget App! This project is the result of following a comprehensive YouTube tutorial that guides you through building a budget management application from scratch. With this app, you can efficiently track your income, expenses, and overall budget, gaining better control of your financial situation.
 
 ## Demo
 
-You can check out the live demo of the Budget App here.
+You can check out the live demo of the Seat Booking App here.
 **Online Demo of Project :**
 
-[Link to Budget App](https://budget.project.ac.cn)
+[Link to Budget App](https://seat-booking-app-0hle.onrender.com)
 
 ## Features
 
@@ -30,7 +30,7 @@ You can check out the live demo of the Budget App here.
 
 1. Open the project in your preferred code editor.
 
-1. Launch the index.html file in your browser to run the Budget App locally.
+1. Launch the index.html file in your browser to run the Seat Booking App locally.
 
 1. Start by adding your income and expenses to track your budget. The app will automatically calculate your available budget.
 
