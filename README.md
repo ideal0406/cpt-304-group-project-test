@@ -1,6 +1,6 @@
 # Budget-App-JavaScript
 
-[![codecov](https://codecov.io/github/ideal0406/cpt-304-group-project-test/graph/badge.svg?token=qjBVklgYXo)](https://codecov.io/github/ideal0406/cpt-304-group-project-test)
+[![codecov](https://codecov.io/github/ideal0406/cpt-304-group-project-test/graph/badge.svg?token=qjBVklgYXo)](https://app.codecov.io/github/ideal0406/cpt-304-group-project-test/tree/main)
 [![Vercel](https://vercelbadge.vercel.app/api/lz233/Budget-app)](https://budget.project.ac.cn)
 
 This project is for the CAN304 group assignment (Group 45).
