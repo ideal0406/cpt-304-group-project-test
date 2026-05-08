@@ -1,0 +1,229 @@
+#seat-booking-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
+    width: 80vw;
+    // max-height: 90vh;
+    
+    #screening-room-1 {
+        display: flex;
+        flex-direction: column;
+        background-color: #0d0b31;
+        width: 80%;
+        max-height: 100%;
+        padding-bottom: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #screen {
+        background-color: rgb(232, 231, 241);
+        margin-bottom: 8rem;
+        margin-top: 3rem;
+        width: 50%;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+    }
+    
+    #seats {
+        display: grid;
+        align-content: start;
+        justify-content: center;
+        grid-column-gap: 2rem;
+        grid-row-gap: .5rem;
+        grid-template-areas: 
+        ".   .   .   .   .   A1  .   .   .   .   .  "
+        ".   .   .   .   A2  A2  A2  .   .   .   .  "
+        "B1L B1L B1L .   A2  A2  A2  .   B2L B2L B2L"
+        "B1L B1L B1L B1  B1  B1  B1  B1  B2L B2L B2L"
+        ".   C1L C1L C1L C1L C1L C1L C1L C1L C1L .  ";
+    }
+
+    #settings {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(209, 194, 209);
+        width: 20%;
+        max-height: 100%;
+        align-self: center;
+        padding: 1rem;
+
+        & .services-list {
+            display: flex;
+            flex-direction: column;
+
+            & select, input {
+                width: 100%;
+                padding: .5rem 1rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            &__btns{
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+            }
+
+            &__form {
+                margin-bottom: 1rem;
+                
+                & input {
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+
+        & .sectors {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 0 .5rem;
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // align-items: center;
+                list-style-type: none;
+                // max-width: 80%;
+
+                & li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 0.2rem;
+
+                    & input {
+                        padding: 0.2rem .5rem;
+                        width: 50%;
+                    }
+
+                    & span {
+                        padding: 0.2rem .5rem;
+                        width: 50%;
+                    }
+                }
+            }
+
+        }
+        
+        & .order {
+            display: flex;
+            flex-direction: column;
+            &__header {
+                display: flex;
+                flex-direction: column;
+            }
+            &__main {
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+                height: 5rem;
+                margin-bottom: 1rem;
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    & li {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                    };
+                }
+            }
+            &__footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    & .sector {
+        display: grid;
+        grid-auto-flow: row;
+        
+        &__label {
+            text-align: right;
+            background-color: #4e0000;
+            color: #f7f7f7;
+            padding: 0.1rem;
+            visibility: hidden;
+            font-size: .8rem;
+        }
+    }
+    
+    & .row {
+        position: relative;
+        background-color: rgba(170, 215, 255, 0.5);
+        box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 60%);
+        border-bottom: 1px solid darkblue;
+        padding-top: .2rem;
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    & .seat {
+        display: inline-block;
+        background-color: rgb(238, 243, 171);
+        border-left: 2px solid rgb(141, 71, 20);
+        border-right: 2px solid rgb(141, 71, 20);
+        border-bottom: 2px solid rgb(141, 71, 20);
+        box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 40%);
+        min-width: 1rem;
+        min-height: 1rem;
+        margin: .5rem .2rem .2rem;
+        border-radius: .2rem;
+        justify-self: stretch;
+        align-self: end;
+        position: relative;
+
+        &:hover {
+            background-color: rgb(247, 228, 197);
+            cursor: pointer;
+            transform: translateY(-.2rem) scale(1.1);
+
+        }
+
+        &--reserved, &--reserved:hover, &--reserved:active {
+            background-color: rgb(80, 229, 255);
+            cursor: default;
+            box-shadow: none;
+            transform: none;
+        }
+
+        &--booked, &--booked:hover, &--booked:active {
+            background-color: rgb(161, 161, 161);
+            cursor: default;
+            box-shadow: none;
+            transform: none;
+        }
+
+        &__info {
+            content: "";
+            position: absolute;
+            // bottom: 0rem;
+            right: -5.5rem;
+            min-width: 5rem;
+            min-height: 3rem;
+            background-color: rgb(80, 229, 255);
+            border-radius: .7rem;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 40%);
+        }
+    }
+}
+

@@ -1,0 +1,39 @@
+{
+  "name": "seat-booking-app",
+  "version": "1.0.0",
+  "description": "This is a Seat Booking App implemented using vanilla JavaScript...",
+  "main": "script/seat-booking-app.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "author": "Damian Zienke",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.59.3"
+  },
+  "devDependencies": {
+    "codecov": "^3.8.2",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "collectCoverageFrom": [
+      "script/seat-booking-classes.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  }
+}
