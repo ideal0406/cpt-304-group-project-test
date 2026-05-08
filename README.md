@@ -1,27 +1,118 @@
-**This project has not been finished yet**
+# Budget-App-JavaScript
 
-# Seat-Booking App
-This is a project of a Seat Booking App implemented using vanilla `JavaScript`. It can be easily adjusted to be used in any project that needs to have a simple **seat-reservation system**. Please note that this project is not finished yet.
+[![codecov](https://codecov.io/github/ideal0406/cpt-304-group-project-test/graph/badge.svg?token=qjBVklgYXo)](https://codecov.io/github/ideal0406/cpt-304-group-project-test)
+[![Vercel](https://vercelbadge.vercel.app/api/lz233/Budget-app)](https://budget.project.ac.cn)
 
-The app uses `ES6` classes and methods, and also uses modern browser APIs such as `querySelector`, `createElement`, and `localStorage`. It also uses the `crypto` API to generate random ids for services and sectors.
+This project is for the CAN304 group assignment (Group 45).
 
-## How it works
-The app has three main classes: `SeatBookingApp`, `Service`, and `Sector`.
+Welcome to the Budget App! This project is the result of following a comprehensive YouTube tutorial that guides you through building a budget management application from scratch. With this app, you can efficiently track your income, expenses, and overall budget, gaining better control of your financial situation.
 
-1. The SeatBookingApp class is responsible for creating instances of Service and Sector, rendering services to the DOM, and caching data to local storage. 
-It provides methods to add sectors and services to the app, get the list of services, and set the current service. It renders the services list to the DOM and caches the services to local storage. 
+## Demo
 
-2. The Service class represents a service with a name, price, and available seats. It provides methods to book seats, add reserved seats, remove reserved seats, and mark seats as booked. This class provides methods to add and remove reserved seats, calculate their prices and book them.
+You can check out the live demo of the Budget App here.
+**Online Demo of Project :**
 
-3. The Sector class represents a sector with a unique id, a price multiplier, and a list of seats in each row. It generates unique seat ids and provides a method to render the sectors to the DOM.
+[Link to Budget App](https://budget.project.ac.cn)
 
-## Bugs
-* reserved seats and order details list should be cleared after adding, deleting or modifying current service and after changing services
-* when localStorage is empty, everything should be blocked until a service is created and cached in localStorage
+## Features
 
-## Things to be implemented
-* **prompt user to create first service**
-* **add input validation and better error handling**
-* enable user to update price multipliers for each sector
-* enable user to create sectors
-    * storing mechanism for sectors is ready (disabled for now)
+- Income and Expense Tracking: The Budget App allows you to enter your sources of income and expenses, categorizing them for better organization.
+
+- Budget Calculation: Based on the provided income and expenses, the app calculates your budget by subtracting expenses from income, giving you a clear overview of your financial status.
+
+- Monthly Reports: Get a comprehensive monthly report that summarizes your income, expenses, and the resulting budget. This helps you understand your spending patterns over time.
+
+- Simple and Intuitive Interface: The app boasts a user-friendly interface, making it easy for anyone to navigate and use, even if you have little to no prior experience with budgeting applications.
+
+## Usage
+
+1. Clone the repository or download the ZIP file.
+
+1. Open the project in your preferred code editor.
+
+1. Launch the index.html file in your browser to run the Budget App locally.
+
+1. Start by adding your income and expenses to track your budget. The app will automatically calculate your available budget.
+
+1. Monitor your budget regularly and adjust your spending to achieve your financial goals.
+
+## Deployment (Vercel)
+
+This project is a static site (HTML/CSS/JS). You can deploy it on Vercel without a build step.
+
+### Deploy via Vercel Dashboard
+
+1. Go to Vercel and click **Add New → Project**.
+2. Import this GitHub repository.
+3. In **Build & Output Settings**:
+   - **Framework Preset**: `Other`
+   - **Build Command**: leave empty
+   - **Output Directory**: `.`
+4. Click **Deploy**.
+
+After deployment, Vercel will provide a `.vercel.app` URL. You can also add a custom domain in **Project Settings → Domains**.
+
+### Deploy via Vercel CLI (optional)
+
+```bash
+npm i -g vercel
+vercel
+vercel --prod
+```
+
+## Tests & Coverage (Codecov)
+
+This repo includes a minimal Jest setup and a GitHub Actions workflow that runs tests and uploads coverage to Codecov on every push.
+
+### Run tests locally
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Run tests with coverage:
+
+   ```bash
+   npm test
+   # or
+   npx jest --coverage
+   ```
+
+After the run, Jest will generate coverage artifacts under `coverage/` (including `coverage/lcov.info`).
+
+### Enable Codecov upload in GitHub Actions
+
+1. Create/sign in to a Codecov account and add this repository.
+2. Get the repository upload token from Codecov.
+3. In GitHub, add the token as a repository secret:
+
+   - Go to **Settings → Secrets and variables → Actions**
+   - Click **New repository secret**
+   - Name: `CODECOV_TOKEN`
+   - Value: (paste the token from Codecov)
+
+Once set, every `push` will trigger the workflow and upload coverage automatically.
+
+## Technologies Used
+
+The Budget App was built using the following technologies and tools:
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Credits
+
+The Budget App tutorial was created by [aaramiss](https://samiraatech.github.io/Budget-app/).
+
+## License
+
+The Budget App is released under the MIT License. You are free to use, modify, and distribute this project for personal and commercial purposes.
+
+## Feedback and Support
+
+If you have any questions, suggestions, or issues with the Budget App, feel free to reach out by creating an issue in the [GitHub repository](https://github.com/lz233/Budget-app/issues). We welcome any feedback to improve the app and make it even more useful for managing personal finances.
+
+Happy budgeting!
